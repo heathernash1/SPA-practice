@@ -78,6 +78,9 @@ footer {
 .flex {
   display: flex;
 }
+.justify-space-around{
+  justify-content: space-around;
+}
 /* If your width and height are the same,
   border-radius: 50% will make it look like a circle. */
 .button--circle {
@@ -95,5 +98,8 @@ footer {
     background-size: cover;
     width: 100vw;
     height: 40vh;
+  }
+  .flex--sm{
+    display: flex;
   }
 }
