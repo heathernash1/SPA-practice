@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title> SPA Practice </title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.5.0/modern-normalize.min.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <header>
@@ -13,21 +14,64 @@
 </header>
 <nav>
   <ul>
-    <li><a href="#">Home </a></li>
-    <li><a href="">Form</a></li>
-    <li><a href="">Blog</a></li>
-    <li><a href="">Gallery </a></li>
+    <li class ="button"><a href="#">Home </a></li>
+    <li class ="button"><a href="">Form</a></li>
+    <li class ="button"><a href="">Blog</a></li>
+    <li class ="button"><a href="">Gallery </a></li>
   </ul>
 </nav>
 
 <main>
-  <figure><img src="https://source.unsplash.com/random/800x600" alt="Random Image"></figure>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia libero aperiam doloribus laboriosam odio fugiat modi ducimus excepturi? Aliquam commodi excepturi corrupti eaque consequuntur odio modi similique? Facere, veritatis natus.</p>
-  <figure><img src="https://source.unsplash.com/random/800x600" alt="Random Image"></figure>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus a, omnis pariatur natus, tempora temporibus officiis magnam aliquam maiores libero earum ducimus modi rem explicabo reiciendis mollitia harum, commodi perspiciatis.</p>
-  <figure><img src="https://source.unsplash.com/random/800x600" alt="Random Image"></figure>
-  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa fugiat dolor alias? Quod voluptatum, ea molestiae temporibus explicabo voluptatem quos. Obcaecati fuga enim officiis hic atque nostrum aut ad exercitationem!</p>
+  <div id="hero">
+<!-- Hero image on 'sm' screen.-->
+  </div>
+  <!-- We set up one flex parent with 3 flex children.-->
+  <div class ="flex">
+    <div>
+      <figure>
+        <img
+          src="https://source.unsplash.com/random/800x600"
+          alt="Random Image"
+        />
+      </figure>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates
+        fugiat necessitatibus tenetur placeat? Ex natus sit, incidunt itaque,
+        quam non dolore iusto iste dolorum excepturi voluptatum vel perferendis
+        tempora fugit!
+      </p>
+    </div>
+    <div>
+      <figure>
+        <img
+          src="https://source.unsplash.com/random/800x600"
+          alt="Random Image"
+        />
+      </figure>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates
+        fugiat necessitatibus tenetur placeat? Ex natus sit, incidunt itaque,
+        quam non dolore iusto iste dolorum excepturi voluptatum vel perferendis
+        tempora fugit!
+      </p>
+    </div>
+    <div>
+      <figure>
+        <img
+          src="https://source.unsplash.com/random/800x600"
+          alt="Random Image"
+        />
+      </figure>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates
+        fugiat necessitatibus tenetur placeat? Ex natus sit, incidunt itaque,
+        quam non dolore iusto iste dolorum excepturi voluptatum vel perferendis
+        tempora fugit!
+      </p>
+    </div>
+  </div>
 </main>
+
 <footer>
   &copy; 2019 Savvy Coders
 </footer>

@@ -1,0 +1,99 @@
+html {
+  --primary-color: #845ec2;
+  --secondary-color: #b39cd0;
+  --text-primary-color: #fbeaff;
+  --text-secondary-color: #00c9a7;
+}
+
+body {
+  font-family: "PT Sans", sans-serif;
+  font-size: 10px;
+  height: 100vh; /* viewport heights */
+}
+
+h1 {
+  color: var(--text-primary-color);
+  font-size: 4.209em;
+}
+
+h2 {
+  font-size: 3.157em;
+}
+
+h3 {
+  font-size: 2.369em;
+}
+
+li,
+p {
+  font-size: 1.777em;
+}
+
+figure,
+img {
+  /* Limit the width of all 'figures' and 'imgs' to be at most 100% of the size of the parent. */
+  max-width: 100%;
+}
+
+header {
+  background-color: var(--primary-color);
+  padding: 1rem;
+  text-align: center;
+}
+
+/* General child selector */
+nav ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+p {
+  /* First number is top and bottom.
+    Second number is left and right. */
+  padding: 0 2.5rem;
+  text-align: center;
+}
+
+footer {
+  background: var(--primary-color);
+  color: var(--text-primary-color);
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.button {
+  background: var(--secondary-color);
+  border-radius: 3px;
+  padding: 0.5rem;
+}
+
+.button a {
+  text-decoration: none;
+}
+.flex {
+  display: flex;
+}
+/* If your width and height are the same,
+  border-radius: 50% will make it look like a circle. */
+.button--circle {
+  border-radius: 50%;
+  height: 8rem;
+  width: 8rem;
+}
+.xs--hidden {
+  display: none;
+}
+
+@media screen and (min-width: 885px ) {
+  #hero {
+    background: url(https://source.unsplash.com/random/800x600) center center no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 40vh;
+  }
+}
