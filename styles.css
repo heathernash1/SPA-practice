@@ -90,7 +90,7 @@ footer {
 }
 
 .button--submit {
-  background-color: green;
+  background-color: mediumslateblue;
   color: white;
 }
 
@@ -118,7 +118,17 @@ footer {
 }
 
 @media screen and (min-width: 768px){
-.flex--sm{
+  form {
+    margin: 0 auto;
+    padding: 0;
+    width: 80vw;
+  }
+
+  form > div {
+    max-width: none;
+}
+
+  .flex--sm{
   display: flex;
 }
 
