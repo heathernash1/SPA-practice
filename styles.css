@@ -25,7 +25,10 @@ h3 {
 }
 
 li,
-p {
+p,
+label,
+input,
+button {
   font-size: 1.777em;
 }
 
@@ -41,12 +44,6 @@ header {
   text-align: center;
 }
 
-/* General child selector */
-nav ul {
-  display: flex;
-  justify-content: space-around;
-}
-
 ul {
   list-style-type: none;
   padding: 0;
@@ -57,6 +54,24 @@ p {
     Second number is left and right. */
   padding: 0 2.5rem;
   text-align: center;
+}
+
+form {
+  padding: 1rem;
+}
+
+/* A space is a general child selector, so we are selecting ANY divs that are children of a form. */
+form div {
+  margin-bottom: 0.5rem;
+}
+
+label {
+  margin-right: 0.25rem;
+}
+
+input {
+  border: solid thin var(--primary-color);
+  border-radius: 3px;
 }
 
 footer {
@@ -72,15 +87,15 @@ footer {
   padding: 0.5rem;
 }
 
+.button--submit {
+  background-color: green;
+  color: white;
+}
+
 .button a {
   text-decoration: none;
 }
-.flex {
-  display: flex;
-}
-.justify-space-around{
-  justify-content: space-around;
-}
+
 /* If your width and height are the same,
   border-radius: 50% will make it look like a circle. */
 .button--circle {
@@ -88,18 +103,25 @@ footer {
   height: 8rem;
   width: 8rem;
 }
-.xs--hidden {
-  display: none;
+
+.flex {
+  display: flex;
 }
 
-@media screen and (min-width: 885px ) {
+.justify-space-around {
+  justify-content: space-around;
+}
+
+@media screen and (min-width: 885px) {
   #hero {
-    background: url(https://source.unsplash.com/random/800x600) center center no-repeat;
+    background: url(https://source.unsplash.com/random/800x600) center center
+      no-repeat;
     background-size: cover;
-    width: 100vw;
     height: 40vh;
+    width: 100vw;
   }
-  .flex--sm{
+
+  .flex--sm {
     display: flex;
   }
 }
