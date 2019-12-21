@@ -28,10 +28,14 @@
 
   <form>
     <!-- For accessability purposes, we make our label for attributes match the ids for inputs.-->
-  <div><label for="fname">First Name:</label><input type="text" id="fname"></div>
-  <div><label for="lname">Last Name:</label><input type="text" id="lname" ></div>
-  <div><label for="email">Email:</label><input type="email" placeholder="me@mydomain.com"></div>
-  <div><label for="fone">Phone #:</label><input type="tel" id="fone"></div>
+  <div class="flex--sm">
+    <div class="flex justify-space-between" ><label for="fname">First Name:</label><input type="text" id="fname"></div>
+  <div class="flex justify-space-between"><label for="lname">Last Name:</label><input type="text" id="lname" ></div>
+  </div>
+  <div class="flex--sm">
+    <div class="flex justify-space-between"><label for="email">Email:</label><input type="email" placeholder="me@mydomain.com"></div>
+  <div class="flex justify-space-between"><label for="fone">Phone #:</label><input type="tel" id="fone"></div>
+  </div>
   <button type="submit">Submit</button>
 </form>
 

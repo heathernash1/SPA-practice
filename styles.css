@@ -63,6 +63,8 @@ form {
 /* A space is a general child selector, so we are selecting ANY divs that are children of a form. */
 form div {
   margin-bottom: 0.5rem;
+  width: 78vw;
+  max-width: 18rem;
 }
 
 label {
@@ -110,6 +112,16 @@ footer {
 
 .justify-space-around {
   justify-content: space-around;
+}
+.justify-space-between {
+  justify-content: space-between;
+}
+
+@media screen and (min-width: 768px){
+.flex--sm{
+  display: flex;
+}
+
 }
 
 @media screen and (min-width: 885px) {
