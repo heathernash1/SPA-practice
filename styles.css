@@ -79,6 +79,9 @@ footer {
 .flex {
   display: flex;
 }
+.flex-wrap{
+  flex-wrap: wrap;
+}
 .justify-space-around{
   justify-content: space-around;
 }
@@ -109,5 +112,21 @@ footer {
   }
   .flex--sm{
     display: flex;
+  }
+  .flex--md{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #gallery > div {
+    width: 50vw;
+  }
+  @media screen and (min-width: 1440px ){
+    #gallery>div {
+      width: 33vw;
+      border: solid 3px coral;
+      border-radius: 0.25rem;
+      margin: 2rem 1rem;
+      width: calc(33vw - 2rem);
+    }
   }
 }
