@@ -56,6 +56,7 @@ p {
   /* First number is top and bottom.
     Second number is left and right. */
   padding: 0 2.5rem;
+  margin: 0;
   text-align: center;
 }
 
@@ -90,6 +91,10 @@ footer {
 }
 .xs--hidden {
   display: none;
+}
+
+#gallery div {
+  text-align: center;
 }
 
 @media screen and (min-width: 885px ) {
