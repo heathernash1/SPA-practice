@@ -53,6 +53,7 @@ p {
   /* First number is top and bottom.
     Second number is left and right. */
   padding: 0 2.5rem;
+  margin: 0;
   text-align: center;
 }
 
@@ -97,7 +98,15 @@ footer {
 .button a {
   text-decoration: none;
 }
-
+.flex {
+  display: flex;
+}
+.flex-wrap{
+  flex-wrap: wrap;
+}
+.justify-space-around{
+  justify-content: space-around;
+}
 /* If your width and height are the same,
   border-radius: 50% will make it look like a circle. */
 .button--circle {
@@ -132,9 +141,14 @@ footer {
   display: flex;
 }
 
+#gallery div {
+  text-align: center;
+  margin: 2rem 0;
+  border-bottom: solid thin coral;
+  padding-bottom: 2rem;
 }
 
-@media screen and (min-width: 885px) {
+@media screen and (min-width: 885px ) {
   #hero {
     background: url(https://source.unsplash.com/random/800x600) center center
       no-repeat;
@@ -145,5 +159,21 @@ footer {
 
   .flex--sm {
     display: flex;
+  }
+  .flex--md{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #gallery > div {
+    width: 50vw;
+  }
+  @media screen and (min-width: 1440px ){
+    #gallery>div {
+      width: 33vw;
+      border: solid 3px coral;
+      border-radius: 0.25rem;
+      margin: 2rem 1rem;
+      width: calc(33vw - 2rem);
+    }
   }
 }
