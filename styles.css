@@ -1,29 +1,26 @@
+/* Rules outside of any media queries apply to all devices (mobile-first). */
 html {
   --primary-color: #845ec2;
   --secondary-color: #b39cd0;
   --text-primary-color: #fbeaff;
   --text-secondary-color: #00c9a7;
 }
-
 body {
   font-family: "PT Sans", sans-serif;
   font-size: 10px;
   height: 100vh; /* viewport heights */
 }
-
 h1 {
   color: var(--text-primary-color);
   font-size: 4.209em;
 }
-
 h2 {
   font-size: 3.157em;
+  margin: 0;
 }
-
 h3 {
   font-size: 2.369em;
 }
-
 li,
 p,
 label,
@@ -31,73 +28,59 @@ input,
 button {
   font-size: 1.777em;
 }
-
 figure,
 img {
   /* Limit the width of all 'figures' and 'imgs' to be at most 100% of the size of the parent. */
   max-width: 100%;
 }
-
 header {
   background-color: var(--primary-color);
   padding: 1rem;
   text-align: center;
 }
-
 ul {
   list-style-type: none;
   padding: 0;
 }
-
 p {
+  margin: 0;
   /* First number is top and bottom.
     Second number is left and right. */
   padding: 0 2.5rem;
   text-align: center;
 }
-
-form {
-  padding: 1rem;
-}
-
-/* A space is a general child selector, so we are selecting ANY divs that are children of a form. */
-form div {
-  margin-bottom: 0.5rem;
-  width: 78vw;
-  max-width: 18rem;
-}
-
 label {
   margin-right: 0.25rem;
 }
-
 input {
   border: solid thin var(--primary-color);
   border-radius: 3px;
 }
-
 footer {
   background: var(--primary-color);
   color: var(--text-primary-color);
   padding: 1.5rem;
   text-align: center;
 }
-
+/* Scope this for just #gallery. */
+#gallery div {
+  border-bottom: solid thin var(--secondary-color);
+  margin: 2rem 0;
+  padding-bottom: 2rem;
+  text-align: center;
+}
 .button {
   background: var(--secondary-color);
   border-radius: 3px;
   padding: 0.5rem;
 }
-
 .button--submit {
-  background-color: mediumslateblue;
+  background-color: green;
   color: white;
 }
-
 .button a {
   text-decoration: none;
 }
-
 /* If your width and height are the same,
   border-radius: 50% will make it look like a circle. */
 .button--circle {
@@ -105,11 +88,12 @@ footer {
   height: 8rem;
   width: 8rem;
 }
-
 .flex {
   display: flex;
 }
-
+.justify-center {
+  justify-content: center;
+}
 .justify-space-around {
   justify-content: space-around;
 }
@@ -117,33 +101,40 @@ footer {
   justify-content: space-between;
 }
 
-@media screen and (min-width: 768px){
-  form {
-    margin: 0 auto;
-    padding: 0;
-    width: 80vw;
+/* We set a breakpoint of 768px. */
+@media screen and (min-width: 768px) {
+  .flex--sm {
+    /* By default, flexbox puts all the children in a row. */
+    display: flex;
   }
-
-  form > div {
-    max-width: none;
 }
-
-  .flex--sm{
-  display: flex;
-}
-
-}
-
 @media screen and (min-width: 885px) {
   #hero {
-    background: url(https://source.unsplash.com/random/800x600) center center
+    background: url(https://source.unsplash.com/random/800x600) top center
       no-repeat;
     background-size: cover;
-    height: 40vh;
+    height: 75vh;
     width: 100vw;
   }
-
-  .flex--sm {
+  .flex--md {
     display: flex;
+    flex-wrap: wrap;
+  }
+  /* Direct child selector. */
+  #gallery > div {
+    width: 50vw;
+  }
+}
+@media screen and (min-width: 1440px) {
+  figure {
+    margin: 0;
+  }
+  /* Direct child selector. */
+  #gallery > div {
+    /* TODO: Look up box-shadow on MDN. */
+    border: solid 3px var(--secondary-color);
+    border-radius: 0.25rem;
+    margin: 2rem 1rem;
+    width: calc(33vw - 2rem);
   }
 }
