@@ -5,22 +5,27 @@ html {
   --text-primary-color: #fbeaff;
   --text-secondary-color: #00c9a7;
 }
+
 body {
   font-family: "PT Sans", sans-serif;
   font-size: 10px;
   height: 100vh; /* viewport heights */
 }
+
 h1 {
   color: var(--text-primary-color);
   font-size: 4.209em;
 }
+
 h2 {
   font-size: 3.157em;
   margin: 0;
 }
+
 h3 {
   font-size: 2.369em;
 }
+
 li,
 p,
 label,
@@ -28,41 +33,62 @@ input,
 button {
   font-size: 1.777em;
 }
+
 figure,
 img {
   /* Limit the width of all 'figures' and 'imgs' to be at most 100% of the size of the parent. */
   max-width: 100%;
 }
+
 header {
   background-color: var(--primary-color);
   padding: 1rem;
   text-align: center;
 }
+
 ul {
   list-style-type: none;
   padding: 0;
 }
+
 p {
   margin: 0;
   /* First number is top and bottom.
     Second number is left and right. */
   padding: 0 2.5rem;
-  margin: 0;
   text-align: center;
 }
+
+form div {
+  margin: 0.25rem 0;
+  width: 80vw;
+}
+
 label {
   margin-right: 0.25rem;
 }
+
 input {
+  width: 100%;
+}
+
+input[type="radio"] {
+  width: 2.5rem;
+}
+
+input,
+textarea {
   border: solid thin var(--primary-color);
   border-radius: 3px;
 }
+
 footer {
   background: var(--primary-color);
   color: var(--text-primary-color);
   padding: 1.5rem;
   text-align: center;
 }
+
 /* Scope this for just #gallery. */
 #gallery div {
   border-bottom: solid thin var(--secondary-color);
@@ -70,30 +96,34 @@ footer {
   padding-bottom: 2rem;
   text-align: center;
 }
+
+.align-center {
+  align-items: center;
+}
+
 .button {
   background: var(--secondary-color);
   border-radius: 3px;
   padding: 0.5rem;
 }
+
+/* Pseudo-selector */
+/* Use focus and hover together for accessibility purposes. */
+p:focus,
+p:hover {
+  background: aquamarine;
+  transition: background 2s ease-in;
+}
+
 .button--submit {
   background-color: green;
   color: white;
 }
+
 .button a {
   text-decoration: none;
 }
-<<<<<<< HEAD
-.flex {
-  display: flex;
-}
-.flex-wrap{
-  flex-wrap: wrap;
-}
-.justify-space-around{
-  justify-content: space-around;
-}
-=======
->>>>>>> form
+
 /* If your width and height are the same,
   border-radius: 50% will make it look like a circle. */
 .button--circle {
@@ -101,17 +131,29 @@ footer {
   height: 8rem;
   width: 8rem;
 }
+
 .flex {
   display: flex;
 }
+
+.flex--column {
+  flex-direction: column;
+}
+
 .justify-center {
   justify-content: center;
 }
+
 .justify-space-around {
   justify-content: space-around;
 }
+
 .justify-space-between {
   justify-content: space-between;
+}
+
+.text-align-center {
+  text-align: center;
 }
 
 /* We set a breakpoint of 768px. */
@@ -121,6 +163,7 @@ footer {
     display: flex;
   }
 }
+
 @media screen and (min-width: 885px) {
   #hero {
     background: url(https://source.unsplash.com/random/800x600) top center
@@ -129,10 +172,12 @@ footer {
     height: 75vh;
     width: 100vw;
   }
+
   .flex--md {
     display: flex;
     flex-wrap: wrap;
   }
+
   /* Direct child selector. */
   #gallery > div {
     width: 50vw;
@@ -142,6 +187,7 @@ footer {
   figure {
     margin: 0;
   }
+
   /* Direct child selector. */
   #gallery > div {
     /* TODO: Look up box-shadow on MDN. */
@@ -149,21 +195,5 @@ footer {
     border-radius: 0.25rem;
     margin: 2rem 1rem;
     width: calc(33vw - 2rem);
-  }
-  .flex--md{
-    display: flex;
-    flex-wrap: wrap;
-  }
-  #gallery > div {
-    width: 50vw;
-  }
-  @media screen and (min-width: 1440px ){
-    #gallery>div {
-      width: 33vw;
-      border: solid 3px coral;
-      border-radius: 0.25rem;
-      margin: 2rem 1rem;
-      width: calc(33vw - 2rem);
-    }
   }
 }
