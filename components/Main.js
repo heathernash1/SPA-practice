@@ -1,4 +1,4 @@
-` <main>
+export default ` <main>
 <div id="hero" class="flex align-center justify-center">
   <!-- Hero image on 'sm' screen. -->
   <a href="./form/" class="button">Contact Us Now!</a>
