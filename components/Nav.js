@@ -1,4 +1,5 @@
-export default `<nav>
+export default () =>
+  `<nav>
 <ul class="flex justify-space-around">
   <li class="button"><a href="#">Home</a></li>
   <li class="button"><a href="./form/">Form</a></li>

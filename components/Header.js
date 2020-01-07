@@ -1,3 +1,7 @@
-export default `<header>
-      <h1>Savvy Oct 2019 SPA</h1>
+// st represents  a piece of state
+export default function(st) {
+  return `
+<header>
+      <h1>${st.heading}</h1>
     </header>`;
+}
