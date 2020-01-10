@@ -1,6 +1,6 @@
 function createListHTML(links) {
   return links.map(link => {
-    return `<li class="button"><a href="./${link.toLowerCase()}/">${link}</li>`;
+    return `<li class="button"><a href="./${link.toLowerCase()}/" data-navigo>${link}</li>`;
   });
 }
 
