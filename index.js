@@ -6,6 +6,8 @@ import * as state from "./store";
 
 import Navigo from "navigo";
 
+import axios from "axios";
+
 const router = new Navigo(location.origin);
 
 /**
@@ -34,8 +36,9 @@ router
   .resolve();
 
 // must querySelectorAll after the page is rendered.
-fetch("https://jsonplaceholder.typicode.com/posts")
-  .then(results => results.json())
-  .then(json => {
-    console.log(json);
-  });
+axios
+  .get("https://jsonplaceholder.typicode.com/posts")
+  .then(results => {
+    state.Resources.posts = results.data;
+  })
+  .catch(error => console.error(error));

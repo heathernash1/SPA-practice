@@ -7,19 +7,22 @@ html {
 }
 
 body {
-  font-family: "PT Sans", sans-serif;
+  background-color: lightseagreen;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 10px;
   height: 100vh; /* viewport heights */
 }
 
 h1 {
-  color: var(--text-primary-color);
-  font-size: 4.209em;
+  color: navy;
+  font-size: 3.209em;
+  background-color: #b39cd0;
 }
 
 h2 {
   font-size: 3.157em;
   margin: 0;
+  text-align: center;
 }
 
 h3 {
@@ -38,12 +41,14 @@ figure,
 img {
   /* Limit the width of all 'figures' and 'imgs' to be at most 100% of the size of the parent. */
   max-width: 100%;
+  width: 50em;
 }
 
 header {
   background-color: var(--primary-color);
   padding: 1rem;
   text-align: center;
+  height: 5rem;
 }
 
 ul {
@@ -56,7 +61,8 @@ p {
   /* First number is top and bottom.
     Second number is left and right. */
   padding: 0 2.5rem;
-  text-align: center;
+  object-fit: contain;
+  align-self: center;
 }
 
 form div {
@@ -122,6 +128,7 @@ p:hover {
 
 .button a {
   text-decoration: none;
+
 }
 
 /* If your width and height are the same,
@@ -131,9 +138,18 @@ p:hover {
   height: 8rem;
   width: 8rem;
 }
-
+.container {
+  display: flex;
+}
 .flex {
   display: flex;
+}
+.flex--home {
+  display: flex;
+  justify-content: space-between;
+  object-fit: contain;
+  margin: 10px 20px 10px 20px;
+
 }
 
 .flex--column {
@@ -161,15 +177,22 @@ p:hover {
   .flex--sm {
     /* By default, flexbox puts all the children in a row. */
     display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    text-align: left;
+    object-fit: contain;
+    flex-wrap: wrap;
+
+
   }
 }
 
 @media screen and (min-width: 885px) {
   #hero {
-    background: url(https://source.unsplash.com/random/800x600) top center
+    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRe2rG_4fMCFdJttrL05NLdaWvoHJx-Xhy9FygMOq6RE0zIHTjL) top center
       no-repeat;
-    background-size: cover;
-    height: 75vh;
+    background-size: contain;
+    height: 50vh;
     width: 100vw;
   }
 
